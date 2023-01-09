@@ -1,0 +1,8 @@
+*{ padding: 0; margin: 0; box-sizing: border-box; }
+body { background: rgb(206, 101, 101); color: #fff; display: flex; align-items: center; justify-content: center;}
+.main__wrapper .inspi__write { border-radius: 10px; height: 100%; max-width: 450px; width: 100%; background: black; text-align: left;}
+.main__wrapper .inspi__write .inspi__write__box { background: green; width: 100%; height: 100%; max-width: 300px; padding: 0 10px; margin: 0 auto;}
+.main__wrapper { border:2px solid black; }
+.edit__board { border: 2px solid #fff; max-width: 424px; width: 100%;}
+.text__area { width: 100%; }
+.text__area > textarea { width: 100%; height: 200px;}
