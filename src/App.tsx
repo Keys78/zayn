@@ -2,9 +2,15 @@ import { useState } from 'react';
 import downloadjs from 'downloadjs';
 import html2canvas from 'html2canvas';
 import './App.css'
+import { useActive } from './hooks/useActive';
+import useOnClickOutside from './hooks/useOnClickOutside';
+import Loader from './components/Loader';
+import { Camera } from 'phosphor-react';
 
 function App() {
   const [quote, setQuote] = useState()
+  const active = useActive(1000)
+
 
 
   const handleCaptureClick = async () => {
@@ -25,11 +31,27 @@ function App() {
         <p>Write beautiful excerpts and share with loved ones!</p>
       </div>
       <div className='inspi__write'>
-      <div contentEditable className='inspi__write__box'>
-          Hello Lorem5000
+
+        <div className='inspi__write__content'>
+          <div className='art__board'>
+            <div className='art__one'></div><div className='art__two'></div>
+          </div>
+          {
+            !active ?
+              <div className='art__board_two'>
+                <div className='art__three'></div><div className='art__four'></div>
+              </div> :
+              <Loader />
+          }
+          <div spellCheck="true" contentEditable className='inspi__write__box'>
+
+            Hello
+          </div>
+        </div>
       </div>
-      </div>
-      <button onClick={handleCaptureClick}>Download</button>
+      <button className='export__btn' style={{ marginTop: '-120px' }} onClick={handleCaptureClick}>
+        <Camera size={26} color="#fff" weight="duotone" />
+      </button>
     </main>
   )
 }
