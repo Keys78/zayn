@@ -43,7 +43,11 @@ function App() {
               </div> :
               <Loader />
           }
-          <div spellCheck="true" contentEditable className='inspi__write__box'>
+          <div
+            spellCheck="true"
+            contentEditable
+            suppressContentEditableWarning={true}
+            className='inspi__write__box'>
 
             Hello
           </div>
