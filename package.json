@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/canvas-confetti": "^1.6.0",
+    "@types/react-color": "^3.0.6",
+    "canvas-confetti": "^1.6.0",
     "downloadjs": "^1.4.7",
     "html2canvas": "^1.4.1",
     "phosphor-react": "^1.4.1",

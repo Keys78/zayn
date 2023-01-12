@@ -1,6 +1,10 @@
 *{ padding: 0; margin: 0; box-sizing: border-box; }
 body { background: #000000; color: #fff; display: flex; align-items: center; justify-content: center;}
 .main__wrapper .export__btn { all: unset; border: 2px solid #fff; border-radius: 50%; padding: 5px 6px 1px 5px; cursor: pointer;}
+.main__wrapper .section__wrapper { position: relative;}
+.main__wrapper .section__wrapper .settings__prompt { position: absolute; top: 30px; right: 28px;}
+
+
 .main__wrapper .inspi__write { min-height: 300px; height: 100%; max-width: 450px; width: 100%; background: rgb(65, 55, 55); text-align: left; padding:20px 10px;}
 .main__wrapper .inspi__write .inspi__write__content { background: #000000; min-height: 300px; border-radius: 10px; padding: 20px; font-size: 18px; }
 .main__wrapper .inspi__write .art__board { display: flex; margin-bottom: 5px; }
