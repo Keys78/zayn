@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'GrandHotel-Regular';
+    src: url('GrandHotel-Regular.eot');
+    src: url('GrandHotel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GrandHotel-Regular.woff') format('woff'),
+        url('GrandHotel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merienda-Regular';
+    src: url('Merienda-Regular.eot');
+    src: url('Merienda-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Merienda-Regular.woff') format('woff'),
+        url('Merienda-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
