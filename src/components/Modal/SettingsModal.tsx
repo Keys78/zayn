@@ -1,4 +1,4 @@
-import { PaintRoller, TextT, TextAa, SmileyWink, X, SmileySad, MaskHappy, MaskSad, SmileyXEyes, ArticleNyTimes } from 'phosphor-react'
+import { PaintRoller, TextT, TextAa, SmileyWink, X, SmileySad, MaskHappy, MaskSad, SmileyXEyes, ArticleNyTimes, Upload, Camera } from 'phosphor-react'
 import { useState } from 'react';
 import { SketchPicker, BlockPicker } from "react-color";
 import { fontFamiliesData, fontSizesData, themesData } from '../../utils/data';
@@ -13,14 +13,29 @@ interface IProps {
     setFontFamily: (val: string) => void;
     setBlockPickerColor: (val: string) => void;
     setTheme: (val: any) => void;
-    
 }
+
+
 
 const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSketchPickerColor, setFontSize, setFontFamily, setBlockPickerColor, setTheme }: IProps) => {
     const { r, g, b, a } = sketchPickerColor;
     const [activeOption, setActiveOption] = useState('0')
 
-   
+    const imageHandler = (e: any) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            if (reader.readyState === 2) {
+                setTheme(`url(${reader.result})`)
+            }
+        }
+        reader.readAsDataURL(e.target.files[0])
+
+    };
+
+
+
+
+
 
     return (
         <div className='settings__modal'>
@@ -59,11 +74,11 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         {
                             activeOption === '2' &&
                             <BlockPicker
-                            color={blockPickerColor}
-                            onChange={(color) => {
-                              setBlockPickerColor(color.hex);
-                            }}
-                          />
+                                color={blockPickerColor}
+                                onChange={(color) => {
+                                    setBlockPickerColor(color.hex);
+                                }}
+                            />
                         }
                     </span>
                 </div>
@@ -111,6 +126,24 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                                 {themesData.map((val: any, i: number) => (
                                     <div className='capitalize' key={i} onClick={() => setTheme(val.value)}>{val.title}</div>
                                 ))}
+
+                                <hr className='my-5' />
+
+                                <span className='file'>
+                                    <label htmlFor='input-file'>
+                                        <div className='flex space-x-3'>
+                                            <Upload size={20} color="#fff" weight="duotone" />
+                                            <p>Upload Theme</p>
+                                        </div>
+                                    </label>
+                                    <input id='input-file' accept="image/*" type='file' onChange={(e) => imageHandler(e)} />
+                                </span>
+
+                                <div className='flex space-x-3'>
+                                    <Camera size={20} color="#fff" weight="duotone" />
+                                    <p>Take Photo ~ <small><i>unavailable</i></small></p>
+                                </div>
+
                             </article>
                         }
                     </span>
@@ -123,7 +156,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div className='data-x'><SmileyXEyes size={20} color="#fff" weight="duotone" /></div>
                         <div className='data-x'><MaskSad size={20} color="#fff" weight="duotone" /></div>
                     </div>
-                    <h3>Mood</h3>
+                    <h3>Mood  ~  <small className='text-gray-500'><i>coming soon...</i></small></h3>
                 </div>
             </div>
         </div>

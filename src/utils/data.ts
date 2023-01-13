@@ -38,8 +38,20 @@ const themesData: { title: string; value: string }[] = [
         value: '#000000'
     },
     {
-        title: 'Lunda',
-        value: 'linear-gradient(to right, #5433ff, #20bdff, #a5fecb);'
+        title: 'Lunda Tans',
+        value: 'linear-gradient(to right, #5433ff, #20bdff, #a5fecb)'
+    },
+    {
+        title: 'Royalins',
+        value: 'linear-gradient(to right, #536976, #292e49)'
+    },
+    {
+        title: 'Keys Special',
+        value: 'url(https://thumbs.dreamstime.com/b/d-metal-brain-growing-light-bulb-standing-out-unlit-incandescent-bulbs-as-leadership-concept-41322341.jpg)'
+    },
+    {
+        title: 'Med Arena',
+        value: 'url(https://thumbs.dreamstime.com/b/portrait-caucasian-female-doctor-apple-human-brain-light-bulb-peach-background-copy-space-scribbles-world-249384004.jpg)'
     }
 ]
 
