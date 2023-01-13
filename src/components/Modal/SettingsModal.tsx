@@ -12,7 +12,7 @@ interface IProps {
     setFontSize: (val: string) => void;
     setFontFamily: (val: string) => void;
     setBlockPickerColor: (val: string) => void;
-    setTheme: (val: string) => void;
+    setTheme: (val: any) => void;
     
 }
 
@@ -115,10 +115,6 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         }
                     </span>
                 </div>
-                {/* <div className='settings_option'>
-                    <div><PaintRoller size={20} color="#fff" weight="duotone" /></div>
-                    <h3>Themes</h3>
-                </div> */}
                 <div className='settings_option'>
                     <div className='dataflow-x'>
                         <div className='data-x'><SmileyWink size={20} color="#fff" weight="duotone" /></div>
