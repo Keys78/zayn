@@ -41,7 +41,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                 <X size={18} color="#eeecec" weight="bold" />
             </div>
             <div className='settings__modal__content'>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => { activeOption !== '1' ? setActiveOption('1') : setActiveOption('0') }}
                         className={`settings_option ${activeOption === '1' && 'showh'}`}
@@ -52,7 +52,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         ></div>
                         <h3>Background Picker</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '1' &&
                             <SketchPicker
@@ -64,7 +64,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         }
                     </span>
                 </div>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => { activeOption !== '2' ? setActiveOption('2') : setActiveOption('0') }}
                         className={`settings_option ${activeOption === '2' && 'showh'}`}
@@ -74,7 +74,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         </div>
                         <h3>Text Color</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '2' &&
                             <BlockPicker
@@ -86,7 +86,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         }
                     </span>
                 </div>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => activeOption !== '3' ? setActiveOption('3') : setActiveOption('0')}
                         className={`settings_option ${activeOption === '3' && 'showh'}`}
@@ -94,18 +94,18 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div><TextT size={20} color="#fff" weight="duotone" /></div>
                         <h3>Font</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '3' &&
                             <article className='fontsize__modal'>
                                 {fontFamiliesData.map((val: any, i: number) => (
-                                    <div style={{ fontFamily: val.value }} className='capitalize' key={i} onClick={() => setFontFamily(val.value)}>{val.title}</div>
+                                    <div style={{ fontFamily: val.value }} className='capitalize-main' key={i} onClick={() => setFontFamily(val.value)}>{val.title}</div>
                                 ))}
                             </article>
                         }
                     </span>
                 </div>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => activeOption !== '4' ? setActiveOption('4') : setActiveOption('0')}
                         className={`settings_option ${activeOption === '4' && 'showh'}`}
@@ -113,18 +113,18 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div><TextAa size={20} color="#fff" weight="duotone" /></div>
                         <h3>Font Size</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '4' &&
                             <article className='fontsize__modal'>
                                 {fontSizesData.map((val: any, i: number) => (
-                                    <div className='capitalize' key={i} onClick={() => setFontSize(val.value)}>{val.title}</div>
+                                    <div className='capitalize-main' key={i} onClick={() => setFontSize(val.value)}>{val.title}</div>
                                 ))}
                             </article>
                         }
                     </span>
                 </div>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => activeOption !== '5' ? setActiveOption('5') : setActiveOption('0')}
                         className={`settings_option ${activeOption === '5' && 'showh'}`}
@@ -132,24 +132,24 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div><TextAlignJustify size={20} color="#fff" weight="duotone" /></div>
                         <h3>Text Align</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '5' &&
                             <article className='fontsize__modal'>
-                                <div className='flex space-x-3' onClick={() => setTextAlign('left')}>
+                                <div className='space-new' onClick={() => setTextAlign('left')}>
                                     <TextAlignLeft size={20} color="#fff" weight="duotone" />&nbsp; Left
                                 </div>
-                                <div className='flex space-x-3' onClick={() => setTextAlign('right')}>
+                                <div className='space-new' onClick={() => setTextAlign('right')}>
                                     <TextAlignRight size={20} color="#fff" weight="duotone" />&nbsp; Right
                                 </div>
-                                <div className='flex space-x-3' onClick={() => setTextAlign('center')}>
+                                <div className='space-new' onClick={() => setTextAlign('center')}>
                                     <TextAlignCenter size={20} color="#fff" weight="duotone" />&nbsp; Center
                                 </div>
                             </article>
                         }
                     </span>
                 </div>
-                <div className='relative'>
+                <div className='relative-main'>
                     <div
                         onClick={() => activeOption !== '6' ? setActiveOption('6') : setActiveOption('0')}
                         className={`settings_option ${activeOption === '6' && 'showh'}`}
@@ -157,22 +157,22 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div><PaintRoller size={20} color="#fff" weight="duotone" /></div>
                         <h3>Themes</h3>
                     </div>
-                    <span className='absolute top-12 right-0 z-20'>
+                    <span className='absolute-main modal-adjust'>
                         {
                             activeOption === '6' &&
                             <article className='fontsize__modal'>
                                 {themesData.map((val: any, i: number) => (
-                                    <div className='capitalize' key={i} onClick={() => setTheme(val.value)}>{val.title}</div>
+                                    <div className='capitalize-main' key={i} onClick={() => setTheme(val.value)}>{val.title}</div>
                                 ))}
                                 <div>
                                     <p>Twitter ~ <small><i>coming soon...</i></small></p>
                                 </div>
 
-                                <hr className='my-5' />
+                                <hr className='spaning-5' />
 
                                 <span className='file'>
                                     <label htmlFor='input-file'>
-                                        <div className='flex space-x-3'>
+                                        <div className='space-new'>
                                             <Upload size={20} color="#fff" weight="duotone" />
                                             <p>Upload Theme</p>
                                         </div>
@@ -180,10 +180,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                                     <input id='input-file' accept="image/*" type='file' onChange={(e) => imageHandler(e)} />
                                 </span>
 
-                                <div className='flex space-x-3'>
+                                {/* <div className='space-new'>
                                     <Camera size={20} color="#fff" weight="duotone" />
                                     <p>Take Photo ~ <small><i>unavailable</i></small></p>
-                                </div>
+                                </div> */}
 
                             </article>
                         }
@@ -197,7 +197,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div className='data-x'><SmileyXEyes size={20} color="#fff" weight="duotone" /></div>
                         <div className='data-x'><MaskSad size={20} color="#fff" weight="duotone" /></div>
                     </div>
-                    <h3>Mood  ~  <small className='text-gray-500'><i>coming soon...</i></small></h3>
+                    <h3>Mood  ~  <small style={{ color: 'gray'}} className='text-gray-500'><i>coming soon...</i></small></h3>
                 </div>
             </div>
         </div>
