@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 
 
-export function useActive(time: number) {
+export function useActive(time: number, element:any) {
     const [active, setActive] = useState(false)
     const timer = useRef() as any;
     const events = [
@@ -20,14 +20,16 @@ export function useActive(time: number) {
             }, time)
         };
 
+        // var element = document.getElementById('tete')
+
         events.forEach(
-            (event) => document.addEventListener(event, handleEvent)
+            (event) => element?.addEventListener(event, handleEvent)
         );
 
         return () => {
             events.forEach(
                 (event) => {
-                    document.removeEventListener(event, handleEvent)
+                    element?.removeEventListener(event, handleEvent)
                 }
             );
         };

@@ -1,4 +1,4 @@
-import { useState, useCallback, lazy } from 'react';
+import { useState, useCallback, lazy, useRef } from 'react';
 import { useActive } from '../hooks/useActive'
 import { handleCaptureClick } from '../utils/helpers';
 import { Aperture, FadersHorizontal } from 'phosphor-react';
@@ -8,10 +8,15 @@ import SettingsModal from '../components/Modal/SettingsModal';
 import Footer from '../components/Footer';
 const Loader = lazy(() => import('../components/Loader'))
 
+interface Event {
+  clipboardData: any;
+}
 
 
 function Home() {
-  const active = useActive(1000)
+  const yyRef = useRef(null as any)
+  const id = document.getElementById(yyRef?.current?.id)
+  const active = useActive(1000, id)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [fontSize, setFontSize] = useState<string>('16px')
   const [fontFamily, setFontFamily] = useState<string>('WorkSans-Regular')
@@ -23,6 +28,8 @@ function Home() {
 
   const onClick = useCallback(() => {
     handleCaptureClick('.inspi__write')
+    var audio = new Audio('/assets/shutter.wav');
+    audio.play();
     confetti({
       particleCount: 100,
       startVelocity: 30,
@@ -33,6 +40,17 @@ function Home() {
       }
     });
   }, []);
+
+//   id?.addEventListener("paste", function(e) {
+//     // cancel paste
+//     e.preventDefault();
+
+//     // get text representation of clipboard
+//     var text = (e.originalEvent || e).clipboardData.getData('text/plain');
+
+//     // insert text manually
+//     document.execCommand("insertHTML", false, text);
+// });
 
 
 
@@ -75,35 +93,37 @@ function Home() {
               <div className='art__one'></div><div className='art__two'></div>
             </div>
             {
-              !active ?
+              active ?
+                <Loader /> :
                 <div className='art__board_two'>
                   <div className='art__three'></div><div className='art__four'></div>
-                </div> :
-                <Loader />
+                </div>
+
             }
 
             <div
               spellCheck="true"
+              ref={yyRef}
+              id={'writer'}
+              placeholder='start typing...'
               contentEditable
               suppressContentEditableWarning={true}
               className='inspi__write__box'
-              style={{ 
+              style={{
                 fontSize: fontSize,
-                 fontFamily: fontFamily,
-                  color: blockPickerColor,
-                  textAlign: textAlign
-                 }}
+                fontFamily: fontFamily,
+                color: blockPickerColor,
+                textAlign: textAlign
+              }}
             >
-
-              Hello
             </div>
           </div>
         </div>
-        <button className='export__btn' style={{ marginTop: '-120px' }} onClick={onClick}>
+        <button className='export__btn spin' style={{ marginTop: '-120px' }} onClick={onClick}>
           <Aperture size={36} color="#e2e2e2" weight="bold" />
         </button>
       </section>
-     <Footer />
+      <Footer />
     </main>
   )
 }
