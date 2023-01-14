@@ -107,9 +107,15 @@ function Home() {
             </div>
           </div>
         </div>
-        <button className='export__btn spin' style={{ marginTop: '-120px' }} onClick={onClick}>
+        {/* <button className='export__btn spin' style={{ marginTop: '-120px' }} onClick={onClick}>
           <Aperture size={36} color="#e2e2e2" weight="bold" />
-        </button>
+        </button> */}
+        <div onClick={onClick} className='button__wrap'>
+          <span className='button__new'>
+            <Aperture size={26} color="#e2e2e2" weight="bold" /> &nbsp;
+            Export
+          </span>
+        </div>
       </section>
       <Footer />
     </main>

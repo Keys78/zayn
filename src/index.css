@@ -27,7 +27,7 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .main__wrapper .inspi__write .art__board_two .art__four { height: 4px; width: 23px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
 
 .main__wrapper .inspi__write .inspi__write__box { display: flex; align-items: center; justify-content: center;
-  word-wrap:break-word; white-space:normal; padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0; margin: 0px auto 0 auto; transition: 0.4s;
+  word-wrap:break-word; white-space:normal; padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0; margin: 0px auto 0 auto; transition: 0.4s; 
   /* user-modify: read-write-plaintext-only; */
   -moz-user-modify: read-write-plaintext-only;
   -webkit-user-modify: read-write-plaintext-only;
@@ -59,9 +59,13 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .settings__modal .file > input[type='file'] { display: none}
 .settings__modal .file > label { user-select: none}
 
-footer { margin-top: 40px;}
+footer { margin-top: 70px;}
 footer > a { all: unset;  text-decoration: underline;}
 footer > a > p { margin-bottom: 20px;}
+
+.button__wrap { display: flex; align-items: center; justify-content: center; border: 1px solid rgb(132, 132, 132); margin-top: 10px;; border-radius: 10px; padding: 6px 0; cursor: pointer; transition: 0.3s;}
+.button__wrap:hover { background: rgba(255, 255, 255, 0.318); opacity: 0.4; transition: 0.3s;}
+.button__new {all: unset; outline: none; border: none; display: flex; align-items: center; }
 
 
 
