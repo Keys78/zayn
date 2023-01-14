@@ -6,16 +6,14 @@ import confetti from 'canvas-confetti'
 import Modal from '../components/Modal';
 import SettingsModal from '../components/Modal/SettingsModal';
 import Footer from '../components/Footer';
-const Loader = lazy(() => import('../components/Loader'))
+const Loader = lazy(() => import('../components/Loaders/Loader'))
 
-interface Event {
-  clipboardData: any;
-}
 
 
 function Home() {
-  const yyRef = useRef(null as any)
-  const id = document.getElementById(yyRef?.current?.id)
+
+  const writePadRef = useRef(null as any)
+  const id = document.getElementById(writePadRef?.current?.id)
   const active = useActive(1000, id)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [fontSize, setFontSize] = useState<string>('16px')
@@ -41,16 +39,6 @@ function Home() {
     });
   }, []);
 
-//   id?.addEventListener("paste", function(e) {
-//     // cancel paste
-//     e.preventDefault();
-
-//     // get text representation of clipboard
-//     var text = (e.originalEvent || e).clipboardData.getData('text/plain');
-
-//     // insert text manually
-//     document.execCommand("insertHTML", false, text);
-// });
 
 
 
@@ -103,7 +91,7 @@ function Home() {
 
             <div
               spellCheck="true"
-              ref={yyRef}
+              ref={writePadRef}
               id={'writer'}
               placeholder='start typing...'
               contentEditable

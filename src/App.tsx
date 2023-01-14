@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home, Privacy } from './pages';
 import './fonts/fonts.css'
-import NetworkLoader from './components/NetworkLoader';
+import NetworkLoader from './components/Loaders/NetworkLoader';
 
 
 function App() {

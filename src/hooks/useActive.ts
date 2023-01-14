@@ -20,8 +20,7 @@ export function useActive(time: number, element:any) {
             }, time)
         };
 
-        // var element = document.getElementById('tete')
-
+        
         events.forEach(
             (event) => element?.addEventListener(event, handleEvent)
         );
