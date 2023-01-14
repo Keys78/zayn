@@ -1,9 +1,7 @@
 import { useState, useCallback, lazy } from 'react';
-import { lazyLoad } from '../utils/lazy';
-
 import { useActive } from '../hooks/useActive'
 import { handleCaptureClick } from '../utils/helpers';
-import { Camera, FadersHorizontal } from 'phosphor-react';
+import { Aperture, FadersHorizontal } from 'phosphor-react';
 import confetti from 'canvas-confetti'
 import Modal from '../components/Modal';
 import SettingsModal from '../components/Modal/SettingsModal';
@@ -13,13 +11,13 @@ const Loader = lazy(() => import('../components/Loader'))
 
 function Home() {
   const active = useActive(1000)
-  const [isModal, setIsModal] = useState<boolean>(true)
+  const [isModal, setIsModal] = useState<boolean>(false)
   const [fontSize, setFontSize] = useState<string>('16px')
-  const [fontFamily, setFontFamily] = useState<string>('Work Sans')
+  const [fontFamily, setFontFamily] = useState<string>('WorkSans-Regular')
   const [theme, setTheme] = useState<string>('#00000')
+  const [textAlign, setTextAlign] = useState<any>('center')
   const [sketchPickerColor, setSketchPickerColor] = useState<any>({ r: "65", g: "55", b: "55", a: "1", });
   const [blockPickerColor, setBlockPickerColor] = useState("#ffffff");
-
   const { r, g, b, a } = sketchPickerColor;
 
   const onClick = useCallback(() => {
@@ -39,11 +37,10 @@ function Home() {
 
   return (
     <main className="main__wrapper">
-
-
-
       <div className='header__section'>
-        <h1>Logo Here</h1>
+        <div className='logo__wrapper'>
+          <img src="/assets/logo.png" alt="logo" />
+        </div>
         <p>Write beautiful excerpts and share with <br /> loved ones!</p>
       </div>
 
@@ -61,12 +58,11 @@ function Home() {
                 setFontSize={setFontSize}
                 setFontFamily={setFontFamily}
                 setTheme={setTheme}
+                setTextAlign={setTextAlign}
               />
             </Modal>
           </div>
-
         </div>
-
 
         <div
           className='inspi__write'
@@ -90,7 +86,12 @@ function Home() {
               contentEditable
               suppressContentEditableWarning={true}
               className='inspi__write__box'
-              style={{ fontSize: fontSize, fontFamily: fontFamily, color: blockPickerColor }}
+              style={{ 
+                fontSize: fontSize,
+                 fontFamily: fontFamily,
+                  color: blockPickerColor,
+                  textAlign: textAlign
+                 }}
             >
 
               Hello
@@ -98,7 +99,7 @@ function Home() {
           </div>
         </div>
         <button className='export__btn' style={{ marginTop: '-120px' }} onClick={onClick}>
-          <Camera size={26} color="#fff" weight="duotone" />
+          <Aperture size={36} color="#e2e2e2" weight="bold" />
         </button>
       </section>
       <a href="/privacy-policy">Privacy Policy</a>
