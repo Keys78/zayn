@@ -59,6 +59,9 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .settings__modal .file > input[type='file'] { display: none}
 .settings__modal .file > label { user-select: none}
 
+footer { margin-top: 20px;}
+footer > a { all: unset;  text-decoration: underline;}
+footer > a > p { margin-bottom: 20px;}
 
 
 

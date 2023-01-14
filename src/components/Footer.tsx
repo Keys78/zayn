@@ -2,7 +2,7 @@ import PoweredByVercel from 'powered-by-vercel'
 
 const Footer = () => {
     return (
-        <div className='flex items-center justify-between flex-col'>
+        <footer className='flex items-center justify-between flex-col'>
             <a className='mb-6 mt-10' href="#">
                 <p className='text-xs underline'>privacy policy</p>
             </a>
@@ -14,7 +14,7 @@ const Footer = () => {
                     width: 150,
                 }}
             />
-        </div>
+        </footer>
     )
 }
 
