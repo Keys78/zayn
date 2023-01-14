@@ -42,7 +42,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
             </div>
             <div className='settings__modal__content'>
                 <div className='relative'>
-                    <div onClick={() => { activeOption !== '1' ? setActiveOption('1') : setActiveOption('0') }} className='settings_option'>
+                    <div
+                        onClick={() => { activeOption !== '1' ? setActiveOption('1') : setActiveOption('0') }}
+                        className={`settings_option ${activeOption === '1' && 'showh'}`}
+                    >
                         <div
                             className='color__badge'
                             style={{ backgroundColor: `rgba(${r},${g},${b},${a})`, }}
@@ -62,7 +65,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                     </span>
                 </div>
                 <div className='relative'>
-                    <div onClick={() => { activeOption !== '2' ? setActiveOption('2') : setActiveOption('0') }} className='settings_option'>
+                    <div
+                        onClick={() => { activeOption !== '2' ? setActiveOption('2') : setActiveOption('0') }}
+                        className={`settings_option ${activeOption === '2' && 'showh'}`}
+                    >
                         <div>
                             <ArticleNyTimes size={20} color={blockPickerColor} weight="duotone" />
                         </div>
@@ -81,7 +87,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                     </span>
                 </div>
                 <div className='relative'>
-                    <div onClick={() => activeOption !== '3' ? setActiveOption('3') : setActiveOption('0')} className='settings_option'>
+                    <div
+                        onClick={() => activeOption !== '3' ? setActiveOption('3') : setActiveOption('0')}
+                        className={`settings_option ${activeOption === '3' && 'showh'}`}
+                    >
                         <div><TextT size={20} color="#fff" weight="duotone" /></div>
                         <h3>Font</h3>
                     </div>
@@ -97,7 +106,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                     </span>
                 </div>
                 <div className='relative'>
-                    <div onClick={() => activeOption !== '4' ? setActiveOption('4') : setActiveOption('0')} className='settings_option'>
+                    <div
+                        onClick={() => activeOption !== '4' ? setActiveOption('4') : setActiveOption('0')}
+                        className={`settings_option ${activeOption === '4' && 'showh'}`}
+                    >
                         <div><TextAa size={20} color="#fff" weight="duotone" /></div>
                         <h3>Font Size</h3>
                     </div>
@@ -113,7 +125,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                     </span>
                 </div>
                 <div className='relative'>
-                    <div onClick={() => activeOption !== '5' ? setActiveOption('5') : setActiveOption('0')} className='settings_option'>
+                    <div
+                        onClick={() => activeOption !== '5' ? setActiveOption('5') : setActiveOption('0')}
+                        className={`settings_option ${activeOption === '5' && 'showh'}`}
+                    >
                         <div><TextAlignJustify size={20} color="#fff" weight="duotone" /></div>
                         <h3>Text Align</h3>
                     </div>
@@ -135,7 +150,10 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                     </span>
                 </div>
                 <div className='relative'>
-                    <div onClick={() => activeOption !== '6' ? setActiveOption('6') : setActiveOption('0')} className='settings_option'>
+                    <div
+                        onClick={() => activeOption !== '6' ? setActiveOption('6') : setActiveOption('0')}
+                        className={`settings_option ${activeOption === '6' && 'showh'}`}
+                    >
                         <div><PaintRoller size={20} color="#fff" weight="duotone" /></div>
                         <h3>Themes</h3>
                     </div>

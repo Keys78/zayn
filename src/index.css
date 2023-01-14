@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{ padding: 0; margin: 0; box-sizing: border-box; transition: 0.4s; }
+#root { max-width: 1280px; margin: 0 auto; padding: 16px 32px 0 32px; text-align: center;}
+.showh { background: #5f5f5f !important }
 body { background: #000000; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif; transition: 0.4s;}
 .main__wrapper .export__btn { all: unset; border-radius: 50%; padding: 5px 6px 1px 5px; cursor: pointer;}
 .main__wrapper .section__wrapper { position: relative;}
 .main__wrapper .section__wrapper .settings__prompt { position: absolute; top: 30px; right: 28px;}
-.main__wrapper .section__wrapper .settings__prompt > svg { position: absolute; top: 2px; right: 10px; }
-.main__wrapper .header__section .logo__wrapper { display: flex; align-items: center; justify-content: center; }
-.main__wrapper .header__section .logo__wrapper > img { width: 150px; }
+.main__wrapper .section__wrapper .settings__prompt > svg { position: absolute; top: 2px; right: 12px; }
+.main__wrapper .header__section .logo__wrapper { display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.main__wrapper .header__section .logo__wrapper > img { width: 90px; }
 .main__wrapper .header__section > p { padding-bottom: 20px; }
 
 
-.main__wrapper .inspi__write { min-height: 300px; height: 100%; min-width: 300px; max-width: 300px; width: 100%; background: rgb(65, 55, 55); text-align: center; padding:20px 20px;}
+.main__wrapper .inspi__write { min-height: 300px; height: 100%; min-width: 300px; width: 100%; max-width: 330px; background: rgb(65, 55, 55); text-align: center; padding:20px 20px;}
 .main__wrapper .inspi__write .inspi__write__content { background: #000000; background-size: cover !important; width: 100%; min-height: 300px; border-radius: 10px; padding: 20px; font-size: 18px; transition: 0.4s; }
 .main__wrapper .inspi__write .art__board { display: flex; margin-bottom: 5px; }
 .main__wrapper .inspi__write .art__board .art__one { height: 4px; width: 4px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 50%; margin-right: 4px;}
@@ -22,9 +24,9 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .main__wrapper .inspi__write .art__board_two .art__three { height: 4px; width: 23px; background: cyan;  border-radius: 10px; margin-right: 4px;}
 .main__wrapper .inspi__write .art__board_two .art__four { height: 4px; width: 23px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
 
-.main__wrapper .inspi__write .inspi__write__box { padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0 10px; margin: 40px auto 0 auto; transition: 0.4s;}
-.main__wrapper { border:2px solid black; }
-.edit__board { border: 2px solid #fff; max-width: 424px; width: 100%;}
+.main__wrapper .inspi__write .inspi__write__box { display: flex; align-items: center; justify-content: center;
+  word-wrap:break-word; white-space:normal;
+  padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0; margin: 0px auto 0 auto; transition: 0.4s;}
 .text__area { width: 100%; }
 .text__area > textarea { width: 100%; height: 200px;} 
 
@@ -50,8 +52,19 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 
 
 
+/*Network loader */
+.progress-1 { position: fixed; top: 0; left: 0; right: 0; height: 4px; display: block; width: 100%; margin: 0; overflow: hidden; background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);; z-index: 2000;}
+.progress-1 .determinate { position: absolute; top: 0; left: 0;bottom: 0; background-color: #26a69a; -webkit-transition: width 0.3s linear; transition: width 0.3s linear;}
+.progress-1 .indeterminate { background:#fdbb2d  }
+.progress-1 .indeterminate:before { content: ""; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)   infinite; animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;}
+.progress-1 .indeterminate:after { content: ""; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)   infinite; animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)   infinite; -webkit-animation-delay: 1.15s; animation-delay: 1.15s;}
+@-webkit-keyframes indeterminate { 0% { left: -35%; right: 100%  } 60% { left: 100%;  right: -90%; } 100% { left: 100%; right: -90%;  }}
+@keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%;  } 100% { left: 100%; right: -90% }}
+@-webkit-keyframes indeterminate-short { 0% { left: -200%; right: 100%;  } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; }}
+@keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8% } 100% { left: 107%; right: -8%; }}
 
-/* type loader */
+
+/* typing loader */
 .dataflow-b .data:nth-child(0) { animation-delay: 0s; background: cyan; width: 28px}
 .dataflow-b .data:nth-child(1) { animation-delay: 0.3s; background:linear-gradient(to right, #757f9a, #d7dde8); width: 28px;}
 .dataflow-b { position: relative; width: 100%; overflow: hidden; height: 4px; max-width: 49px; display: flex;}
@@ -98,3 +111,15 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 }
 
 
+
+@media screen and (max-width: 480px) {
+  .main__wrapper .header__section .logo__wrapper > img { width: 75px; }
+}
+
+@media screen and (max-width: 350px) {
+  .main__wrapper .inspi__write { min-width: 0; }
+  #root {
+    padding: 16px 16px 0 16px;
+  }
+
+}

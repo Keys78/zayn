@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home, Privacy } from './pages';
 import './App.css'
 import './fonts/fonts.css'
+import NetworkLoader from './components/NetworkLoader';
 
 
 function App() {
 
-  const renderLoader = () => 'loading...'
+  const renderLoader = () => <NetworkLoader />
 
   return (
     <Suspense fallback={renderLoader()}>

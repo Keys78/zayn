@@ -5,6 +5,7 @@ import { Aperture, FadersHorizontal } from 'phosphor-react';
 import confetti from 'canvas-confetti'
 import Modal from '../components/Modal';
 import SettingsModal from '../components/Modal/SettingsModal';
+import Footer from '../components/Footer';
 const Loader = lazy(() => import('../components/Loader'))
 
 
@@ -41,7 +42,7 @@ function Home() {
         <div className='logo__wrapper'>
           <img src="/assets/logo.png" alt="logo" />
         </div>
-        <p>Write beautiful excerpts and share with <br /> loved ones!</p>
+        <p className='sm:text-base text-sm'>Write beautiful excerpts and share with <br /> loved ones!</p>
       </div>
 
       <section className='section__wrapper'>
@@ -102,7 +103,7 @@ function Home() {
           <Aperture size={36} color="#e2e2e2" weight="bold" />
         </button>
       </section>
-      <a href="/privacy-policy">Privacy Policy</a>
+     <Footer />
     </main>
   )
 }
