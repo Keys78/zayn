@@ -11,10 +11,9 @@ const Loader = lazy(() => import('../components/Loaders/Loader'))
 
 
 function Home() {
-
   const writePadRef = useRef(null as any)
-  const id = document.getElementById(writePadRef?.current?.id)
-  const active = useActive(1000, id)
+  const x = document.getElementById(writePadRef?.current?.id)
+  const active = useActive(1000, x)
   const [isModal, setIsModal] = useState<boolean>(false)
   const [fontSize, setFontSize] = useState<string>('16px')
   const [fontFamily, setFontFamily] = useState<string>('WorkSans-Regular')
@@ -92,7 +91,7 @@ function Home() {
             <div
               spellCheck="true"
               ref={writePadRef}
-              id={'writer'}
+              id={'tete'}
               placeholder='start typing...'
               contentEditable
               suppressContentEditableWarning={true}
