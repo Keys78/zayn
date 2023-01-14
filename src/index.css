@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{ padding: 0; margin: 0; box-sizing: border-box; }
-body { background: #000000; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif;}
-.main__wrapper .export__btn { all: unset; border: 2px solid #fff; border-radius: 50%; padding: 5px 6px 1px 5px; cursor: pointer;}
+*{ padding: 0; margin: 0; box-sizing: border-box; transition: 0.4s; }
+body { background: #000000; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif; transition: 0.4s;}
+.main__wrapper .export__btn { all: unset; border-radius: 50%; padding: 5px 6px 1px 5px; cursor: pointer;}
 .main__wrapper .section__wrapper { position: relative;}
 .main__wrapper .section__wrapper .settings__prompt { position: absolute; top: 30px; right: 28px;}
-.main__wrapper .section__wrapper .settings__prompt > svg { position: absolute; top: 0; right: 0; }
-/* .main__wrapper .section__wrapper .settings__cta_wrapper { border:1px solid #fff;} */
+.main__wrapper .section__wrapper .settings__prompt > svg { position: absolute; top: 2px; right: 10px; }
+.main__wrapper .header__section .logo__wrapper { display: flex; align-items: center; justify-content: center; }
+.main__wrapper .header__section .logo__wrapper > img { width: 150px; }
+.main__wrapper .header__section > p { padding-bottom: 20px; }
 
 
-.main__wrapper .inspi__write { min-height: 300px; height: 100%; min-width: 350px; max-width: 350px; width: 100%; background: rgb(65, 55, 55); text-align: left; padding:20px 10px;}
-.main__wrapper .inspi__write .inspi__write__content { background: #000000; background-size: cover !important; width: 100%; min-height: 300px; border-radius: 10px; padding: 20px; font-size: 18px; }
+.main__wrapper .inspi__write { min-height: 300px; height: 100%; min-width: 300px; max-width: 300px; width: 100%; background: rgb(65, 55, 55); text-align: center; padding:20px 20px;}
+.main__wrapper .inspi__write .inspi__write__content { background: #000000; background-size: cover !important; width: 100%; min-height: 300px; border-radius: 10px; padding: 20px; font-size: 18px; transition: 0.4s; }
 .main__wrapper .inspi__write .art__board { display: flex; margin-bottom: 5px; }
 .main__wrapper .inspi__write .art__board .art__one { height: 4px; width: 4px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 50%; margin-right: 4px;}
 .main__wrapper .inspi__write .art__board .art__two { height: 4px; width: 42px; background: linear-gradient(to right, #d7dde8, #dd1818); border-radius: 20px; }
@@ -20,7 +22,7 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .main__wrapper .inspi__write .art__board_two .art__three { height: 4px; width: 23px; background: cyan;  border-radius: 10px; margin-right: 4px;}
 .main__wrapper .inspi__write .art__board_two .art__four { height: 4px; width: 23px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
 
-.main__wrapper .inspi__write .inspi__write__box { padding: 10px; outline: none; width: 100%; height: 300px; max-width: 300px; padding: 0 10px; margin: 40px auto 0 auto; }
+.main__wrapper .inspi__write .inspi__write__box { padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0 10px; margin: 40px auto 0 auto; transition: 0.4s;}
 .main__wrapper { border:2px solid black; }
 .edit__board { border: 2px solid #fff; max-width: 424px; width: 100%;}
 .text__area { width: 100%; }
@@ -42,56 +44,8 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .settings__modal .fontsize__modal > div:hover { background:#302b63; cursor: pointer }
 .settings__modal .fontsize__modal > span > label > div { padding: 5px 12px; color: #fff; width: 100%; font-size: 14px;}
 .settings__modal .fontsize__modal > span > label > div:hover { background:#302b63; cursor: pointer }
-/* .settings__modal . */
-.file {
-  /* position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.file > input[type='file'] {
-  display: none
-}
-
-.file > label {
-  /* cursor: pointer; */
-  /* outline: 0; */
-  user-select: none;
-  /* border-color:   hsl(204, 86%, 53%); */
-  /* border-style: solid; */
-  /* border-radius: 50%; */
-  /* border-width: 1px; */
-  /* background-color: hsl(195, 100%, 96%); */
-  /* color: hsl(0, 0%, 29%); */
-  /* padding: 4px; */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.settings__modal .file > input[type='file'] { display: none}
+.settings__modal .file > label { user-select: none}
 
 
 

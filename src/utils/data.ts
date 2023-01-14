@@ -1,3 +1,5 @@
+import { TextAlignLeft } from "phosphor-react";
+
 const fontSizesData: { title: string; value: string }[] = [
     {
         title: 'default',
@@ -19,8 +21,8 @@ const fontSizesData: { title: string; value: string }[] = [
 
 const fontFamiliesData: { title: string; value: string }[] = [
     {
-        title: 'Default',
-        value: 'Work Sans'
+        title: 'WorkSans',
+        value: 'WorkSans-Regular'
     },
     {
         title: 'Grand Hotel',
@@ -55,8 +57,9 @@ const themesData: { title: string; value: string }[] = [
     }
 ]
 
+
 export {
     fontSizesData,
     fontFamiliesData,
-    themesData
+    themesData,
 }

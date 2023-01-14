@@ -1,4 +1,4 @@
-import { PaintRoller, TextT, TextAa, SmileyWink, X, SmileySad, MaskHappy, MaskSad, SmileyXEyes, ArticleNyTimes, Upload, Camera } from 'phosphor-react'
+import { PaintRoller, TextT, TextAa, SmileyWink, X, SmileySad, MaskHappy, MaskSad, SmileyXEyes, ArticleNyTimes, Upload, Camera, TextAlignJustify, TextAlignLeft, TextAlignRight, TextAlignCenter } from 'phosphor-react'
 import { useState } from 'react';
 import { SketchPicker, BlockPicker } from "react-color";
 import { fontFamiliesData, fontSizesData, themesData } from '../../utils/data';
@@ -12,12 +12,13 @@ interface IProps {
     setFontSize: (val: string) => void;
     setFontFamily: (val: string) => void;
     setBlockPickerColor: (val: string) => void;
-    setTheme: (val: any) => void;
+    setTheme: (val: string) => void;
+    setTextAlign: (val: string) => void;
 }
 
 
 
-const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSketchPickerColor, setFontSize, setFontFamily, setBlockPickerColor, setTheme }: IProps) => {
+const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSketchPickerColor, setFontSize, setFontFamily, setBlockPickerColor, setTheme, setTextAlign }: IProps) => {
     const { r, g, b, a } = sketchPickerColor;
     const [activeOption, setActiveOption] = useState('0')
 
@@ -31,9 +32,6 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
         reader.readAsDataURL(e.target.files[0])
 
     };
-
-
-
 
 
 
@@ -116,16 +114,41 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                 </div>
                 <div className='relative'>
                     <div onClick={() => activeOption !== '5' ? setActiveOption('5') : setActiveOption('0')} className='settings_option'>
-                        <div><PaintRoller size={20} color="#fff" weight="duotone" /></div>
-                        <h3>Themes</h3>
+                        <div><TextAlignJustify size={20} color="#fff" weight="duotone" /></div>
+                        <h3>Text Align</h3>
                     </div>
                     <span className='absolute top-12 right-0 z-20'>
                         {
                             activeOption === '5' &&
                             <article className='fontsize__modal'>
+                                <div className='flex space-x-3' onClick={() => setTextAlign('left')}>
+                                    <TextAlignLeft size={20} color="#fff" weight="duotone" />&nbsp; Left
+                                </div>
+                                <div className='flex space-x-3' onClick={() => setTextAlign('right')}>
+                                    <TextAlignRight size={20} color="#fff" weight="duotone" />&nbsp; Right
+                                </div>
+                                <div className='flex space-x-3' onClick={() => setTextAlign('center')}>
+                                    <TextAlignCenter size={20} color="#fff" weight="duotone" />&nbsp; Center
+                                </div>
+                            </article>
+                        }
+                    </span>
+                </div>
+                <div className='relative'>
+                    <div onClick={() => activeOption !== '6' ? setActiveOption('6') : setActiveOption('0')} className='settings_option'>
+                        <div><PaintRoller size={20} color="#fff" weight="duotone" /></div>
+                        <h3>Themes</h3>
+                    </div>
+                    <span className='absolute top-12 right-0 z-20'>
+                        {
+                            activeOption === '6' &&
+                            <article className='fontsize__modal'>
                                 {themesData.map((val: any, i: number) => (
                                     <div className='capitalize' key={i} onClick={() => setTheme(val.value)}>{val.title}</div>
                                 ))}
+                                <div>
+                                    <p>Twitter ~ <small><i>coming soon...</i></small></p>
+                                </div>
 
                                 <hr className='my-5' />
 
