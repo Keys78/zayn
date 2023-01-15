@@ -47,7 +47,7 @@ function Home() {
         <div className='logo__wrapper'>
           <img src="/assets/logo.png" alt="logo" />
         </div>
-        <p className='sm:text-base text-sm text-center'>Write beautiful excerpts and share with <br /> loved ones!</p>
+        <p className='sm:text-base text-sm'>Write beautiful excerpts and share with <br /> loved ones!</p>
       </div>
 
       <section className='section__wrapper'>
