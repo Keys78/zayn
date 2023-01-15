@@ -47,7 +47,7 @@ function Home() {
         <div className='logo__wrapper'>
           <img src="/assets/logo.png" alt="logo" />
         </div>
-        <p className='sm:text-base text-sm'>Write beautiful excerpts and share with <br /> loved ones!</p>
+        <p className='sm:text-base text-sm text-center'>Write beautiful excerpts and share with <br /> loved ones!</p>
       </div>
 
       <section className='section__wrapper'>
@@ -106,12 +106,9 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* <button className='export__btn spin' style={{ marginTop: '-120px' }} onClick={onClick}>
-          <Aperture size={36} color="#e2e2e2" weight="bold" />
-        </button> */}
         <div onClick={onClick} className='button__wrap'>
           <span className='button__new'>
-            <Aperture size={26} color="#e2e2e2" weight="bold" /> &nbsp;
+            <Aperture size={20} color="#e2e2e2" weight="bold" /> &nbsp;
             Export
           </span>
         </div>

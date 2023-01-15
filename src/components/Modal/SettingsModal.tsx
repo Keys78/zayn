@@ -173,7 +173,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                                 <span className='file'>
                                     <label htmlFor='input-file'>
                                         <div className='space-new'>
-                                            <Upload size={20} color="#fff" weight="duotone" />
+                                            <Upload size={20} color="#fff" weight="duotone" />&nbsp;&nbsp;
                                             <p>Upload Theme</p>
                                         </div>
                                     </label>

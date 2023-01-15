@@ -1,5 +1,3 @@
-import { TextAlignLeft } from "phosphor-react";
-
 const fontSizesData: { title: string; value: string }[] = [
     {
         title: 'default',
@@ -31,6 +29,10 @@ const fontFamiliesData: { title: string; value: string }[] = [
     {
         title: 'Merienda',
         value: 'Merienda-Regular'
+    },
+    {
+        title: 'Satisfy',
+        value: 'Satisfy-Regular'
     }
 ]
 
@@ -49,11 +51,15 @@ const themesData: { title: string; value: string }[] = [
     },
     {
         title: 'Keys Special',
-        value: 'url(https://thumbs.dreamstime.com/b/d-metal-brain-growing-light-bulb-standing-out-unlit-incandescent-bulbs-as-leadership-concept-41322341.jpg)'
+        value: 'url(assets/luring_waves.jpg)'
     },
     {
-        title: 'Med Arena',
-        value: 'url(https://thumbs.dreamstime.com/b/portrait-caucasian-female-doctor-apple-human-brain-light-bulb-peach-background-copy-space-scribbles-world-249384004.jpg)'
+        title: 'Intellight',
+        value: 'url(assets/bulbo.jpg)'
+    },
+    {
+        title: 'Astigmatic',
+        value: 'url(assets/keyes.jpg)'
     }
 ]
 

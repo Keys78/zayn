@@ -1,4 +1,15 @@
 @font-face {
+    font-family: 'Satisfy-Regular';
+    src: url('Satisfy-Regular.eot');
+    src: url('Satisfy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Satisfy-Regular.woff') format('woff'),
+        url('Satisfy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'GrandHotel-Regular';
     src: url('GrandHotel-Regular.eot');
     src: url('GrandHotel-Regular.eot?#iefix') format('embedded-opentype'),
@@ -30,5 +41,7 @@
     font-style: normal;
     font-display: swap;
 }
+
+
 
 
