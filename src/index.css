@@ -146,7 +146,7 @@ footer > a > p { margin-bottom: 20px; font-size: 12px; cursor: pointer;}
 
 
 /* media queries */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 378px) {
   .main__wrapper .header__section .logo__wrapper > img { width: 75px; }
   .main__wrapper .inspi__write { min-height: 100%; height: 100%; min-width: 100%; width: 100%; max-width: 100%; padding: 20px 20px; }
   body { display: block; padding: 0 20px; }
