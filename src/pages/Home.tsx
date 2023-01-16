@@ -45,6 +45,14 @@ function Home() {
     <main className="main__wrapper">
       <div className='header__section'>
         <div className='logo__wrapper'>
+          <div>
+            {/* <div className='art__board'>
+              <div className='art__one'></div><div className='art__two'></div>
+            </div> */}
+            {/* <div className='art__board_two'>
+              <div className='art__three'></div><div className='art__four'></div>
+            </div> */}
+          </div>
           <img src="/assets/logo.png" alt="logo" />
         </div>
         <p className='sm:text-base text-sm'>Write beautiful excerpts and share with <br /> loved ones!</p>
@@ -118,4 +126,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

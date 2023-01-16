@@ -197,7 +197,7 @@ const SettingsModal = ({ sketchPickerColor, blockPickerColor, setIsModal, setSke
                         <div className='data-x'><SmileyXEyes size={20} color="#fff" weight="duotone" /></div>
                         <div className='data-x'><MaskSad size={20} color="#fff" weight="duotone" /></div>
                     </div>
-                    <h3>Mood  ~  <small style={{ color: 'gray'}} className='text-gray-500'><i>coming soon...</i></small></h3>
+                    <h3>Mood  ~  <small style={{ color: 'gray' }} className='text-gray-500'><i>coming soon...</i></small></h3>
                 </div>
             </div>
         </div>
