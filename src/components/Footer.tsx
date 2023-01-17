@@ -3,7 +3,7 @@ import PoweredByVercel from 'powered-by-vercel'
 const Footer = () => {
     return (
         <footer>
-            <a href="#">
+            <a href="/privacy-policy">
                 <p>privacy policy</p>
             </a>
             <PoweredByVercel

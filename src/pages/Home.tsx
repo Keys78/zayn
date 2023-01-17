@@ -46,14 +46,14 @@ function Home() {
       <div className='header__section'>
         <div className='logo__wrapper'>
           <div>
-            {/* <div className='art__board'>
-              <div className='art__one'></div><div className='art__two'></div>
-            </div> */}
-            {/* <div className='art__board_two'>
-              <div className='art__three'></div><div className='art__four'></div>
-            </div> */}
+            <div className='logo__board'>
+              <div className='logo__one'></div><div className='logo__two'></div>
+            </div>
+            <div className='logo__board_two'>
+              <div className='logo__three'></div><div className='logo__four'></div>
+            </div>
           </div>
-          <img src="/assets/logo.png" alt="logo" />
+          {/* <img src="/assets/logo.png" alt="logo" /> */}
         </div>
         <p className='sm:text-base text-sm'>Write beautiful excerpts and share with <br /> loved ones!</p>
       </div>

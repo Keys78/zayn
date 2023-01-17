@@ -35,6 +35,13 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .main__wrapper .inspi__write .art__board_two .art__three { height: 4px; width: 23px; background: cyan;  border-radius: 10px; margin-right: 4px;}
 .main__wrapper .inspi__write .art__board_two .art__four { height: 4px; width: 23px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
 
+.logo__board { display: flex; margin-bottom: 10px; margin-top: 30px; }
+.logo__board .logo__one { height: 14px; width: 14px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 50%; margin-right: 4px;}
+.logo__board .logo__two { height: 14px; width: 92px; background: linear-gradient(to right, #d7dde8, #dd1818); border-radius: 20px; }
+.logo__board_two { display: flex; margin-bottom: 10px; }
+.logo__board_two .logo__three { height: 14px; width: 51px; background: cyan;  border-radius: 10px; margin-right: 8px;}
+.logo__board_two .logo__four { height: 14px; width: 51px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
+
 .main__wrapper .inspi__write .inspi__write__box { display: flex; align-items: center; justify-content: center;
   word-wrap:break-word; white-space:normal; padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0; margin: 0px auto 0 auto; transition: 0.4s; 
   /* user-modify: read-write-plaintext-only; */
@@ -77,6 +84,9 @@ footer > a > p { margin-bottom: 20px; font-size: 12px; cursor: pointer;}
 .button__wrap span:hover { background: rgba(255, 255, 255, 0.318); opacity: 0.4; transition: 0.3s;}
 .button__wrap span > svg { -webkit-animation:spin 0.4s linear; -moz-animation:spin 0.4s linear; animation:spin 0.4s linear; }
 .button__new {all: unset; outline: none; border: none; display: flex; align-items: center; }
+
+/* privacy */
+.privacy { max-width: 1080px; margin: 30px auto; color: #ffffff89; padding: 10px 20px;} 
 
 
 
@@ -143,6 +153,8 @@ footer > a > p { margin-bottom: 20px; font-size: 12px; cursor: pointer;}
 @keyframes spin { 
   100% {  -webkit-transform: rotate(360deg);  transform:rotate(360deg);  } 
 }
+
+
 
 
 /* media queries */
