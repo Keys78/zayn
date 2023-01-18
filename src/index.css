@@ -42,7 +42,7 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .logo__board_two .logo__three { height: 14px; width: 51px; background: cyan;  border-radius: 10px; margin-right: 8px;}
 .logo__board_two .logo__four { height: 14px; width: 51px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 10px; }
 
-.main__wrapper .inspi__write .inspi__write__box { display: flex; align-items: center; justify-content: center;
+.main__wrapper .inspi__write .inspi__write__box { display: flex; align-items: center; justify-content: center; vertical-align: middle;
   word-wrap:break-word; white-space:normal; padding: 10px; outline: none; width: 100%; min-height: 300px; max-width: 300px; padding: 0; margin: 0px auto 0 auto; transition: 0.4s; 
   /* user-modify: read-write-plaintext-only; */
   -moz-user-modify: read-write-plaintext-only;
@@ -86,7 +86,7 @@ footer > a > p { margin-bottom: 20px; font-size: 12px; cursor: pointer;}
 .button__new {all: unset; outline: none; border: none; display: flex; align-items: center; }
 
 /* privacy */
-.privacy { max-width: 1080px; margin: 30px auto; color: #ffffff89; padding: 10px 20px;} 
+.privacy { max-width: 1080px; margin: 30px auto; color: #ffffffb6; padding: 10px 20px;} 
 
 
 
