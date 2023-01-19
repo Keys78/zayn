@@ -26,7 +26,7 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .main__wrapper .header__section > p { padding-bottom: 20px; text-align: center; }
 
 
-.main__wrapper .inspi__write { min-height: 300px; height: 100%; min-width: 300px; width: 100%; max-width: 330px; background: rgb(65, 55, 55); text-align: center; padding:20px 20px;}
+.main__wrapper .inspi__write { border: none; outline: none; min-height: 300px; height: 100%; min-width: 300px; width: 100%; max-width: 330px; background: rgb(65, 55, 55); text-align: center; padding:20px 20px;}
 .main__wrapper .inspi__write .inspi__write__content { background: #000000; background-size: cover !important; width: 100%; min-height: 300px; border-radius: 10px; padding: 20px; font-size: 18px; transition: 0.4s; }
 .main__wrapper .inspi__write .art__board { display: flex; margin-bottom: 5px; }
 .main__wrapper .inspi__write .art__board .art__one { height: 4px; width: 4px; background:linear-gradient(to right, #757f9a, #d7dde8); border-radius: 50%; margin-right: 4px;}
@@ -75,7 +75,7 @@ body { background: #000000; color: #fff; display: flex; align-items: center; jus
 .settings__modal .file > input[type='file'] { display: none}
 .settings__modal .file > label { user-select: none}
 
-footer { margin-top: 70px; display: flex; align-items: center; flex-direction: column; justify-content: space-between;}
+footer { margin-top: 70px; display: flex; align-items: center; flex-direction: column; justify-content: space-between; }
 footer > a { all: unset;  text-decoration: underline;}
 footer > a > p { margin-bottom: 20px; font-size: 12px; cursor: pointer;}
 
