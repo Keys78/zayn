@@ -11,11 +11,11 @@ export default defineConfig({
       manifest: {
         name: 'Zayn',
         short_name: 'Zayn',
-        start_url: '/',
+        start_url: 'https://zayn.vercel.app',
         display: 'standalone',
         background_color: '#000000',
         lang: 'en',
-        scope: '/',
+        scope: 'https://zayn.vercel.app',
         icons: [
           {
             src: '/android-chrome-192x192.png',
